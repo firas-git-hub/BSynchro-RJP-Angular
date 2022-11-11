@@ -2,17 +2,21 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { CreateAccountForUserModel } from '../Models/create-account-for-user-model';
-import { UserInfo } from '../Models/user-info';
+import { CreateAccountForUserModel } from '../Models/Entities/create-account-for-user-model';
+import { CreateNewUserModel } from '../Models/Entities/create-new-user-model';
+import { User } from '../Models/Entities/user';
+import { UserInfo } from '../Models/Entities/user-info';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomersService {
 
-  customersApiUrl = "https://localhost:7192";
-  getUserInfoActionUrl = "/Users/GetUser/";
-  createAccountForUserActionUrl = "/Users/CreateNewAccountForUser";
+  private customersApiUrl = "https://localhost:7192";
+  private getUserInfoActionUrl = "/Users/GetUser/";
+  private createAccountForUserActionUrl = "/Users/CreateNewAccountForUser";
+  private createNewUserActionUrl = "/Users/CreateUser";
+  private getAllUsersActionUrl = "/Users/GetAllUsers";
 
   constructor(private http: HttpClient) { }
 
@@ -27,17 +31,36 @@ export class CustomersService {
     }
   }
 
-  createNewAccountForUser = (userId: number, initialCredit: number) => {
+  createNewAccountForUser = (newAccount: CreateAccountForUserModel) => {
     try {
-      let createAccountForUserData: CreateAccountForUserModel = {
-        userId: userId,
-        initialCredit: initialCredit
-      }
+      let createAccountForUserData: CreateAccountForUserModel = newAccount;
       const headers = new HttpHeaders()
         .set("Content-Type", "application/json");
       return this.http.post(this.customersApiUrl + this.createAccountForUserActionUrl, createAccountForUserData, { headers });
     } catch (error) {
-      console.log("Error getUserInfo : " + error);
+      console.log("Error createNewAccountForUser : " + error);
+      return null;
+    }
+  }
+
+  createNewUser = (newUserInfo: CreateNewUserModel) => {
+    try {
+      const headers = new HttpHeaders()
+        .set("Content-Type", "application/json");
+      return this.http.post(this.customersApiUrl + this.createNewUserActionUrl, newUserInfo, { headers });
+    } catch (error) {
+      console.log("Error createNewUser : " + error);
+      return null;
+    }
+  }
+
+  getAllUsers = () => {
+    try {
+      const headers = new HttpHeaders()
+        .set("Content-Type", "application/json");
+      return this.http.get<User[]>(this.customersApiUrl + this.getAllUsersActionUrl, { headers });
+    } catch (error) {
+      console.log("Error getAllUsers : " + error);
       return null;
     }
   }

@@ -3,17 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomePageComponent } from './Pages/home-page/home-page.component';
+import { MainPageComponent } from './Pages/main-page/main-page.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { AngularMaterialModuleModule } from './Modules/angular-material-module/angular-material-module.module';
+import { PageActionCardComponent } from './Components/page-action-card/page-action-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
+    MainPageComponent,
+    NavBarComponent,
+    PageActionCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

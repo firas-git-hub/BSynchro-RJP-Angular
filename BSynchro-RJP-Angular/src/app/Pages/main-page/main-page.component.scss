@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+}
+
+.main-page-body {
+    height: 100%;
+    overflow: auto;
+}

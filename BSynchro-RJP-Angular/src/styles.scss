@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    overflow: auto;
+    position: relative;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.background-color--transparent-black {
+    background-color: hsla(0, 0%, 0%, 0);
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: hsla(0, 0%, 0%, 0.5);
+        transition: background-color 0.5s;
+    }
+}
+
+.button-icon {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.flex--dir-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex--dir-row {
+    display: flex;
+    flex-direction: row;
+}
