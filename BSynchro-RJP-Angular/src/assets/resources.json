@@ -52,6 +52,14 @@
         "en": "Surname"
     },
     {
+        "key": "addUser",
+        "en": "Add User"
+    },
+    {
+        "key": "createUserDialogHeader",
+        "en": "Enter User Information"
+    },
+    {
         "key": "",
         "en": ""
     },

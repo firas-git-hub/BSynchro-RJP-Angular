@@ -10,6 +10,7 @@ import { UsersPageComponent } from './Pages/users-page/users-page.component';
 import { NotFoundPageComponent } from './Pages/not-found-page/not-found-page.component';
 import { UserInfoTableComponent } from './Components/user-info-table/user-info-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateNewUserDialogComponent } from './Components/create-new-user-dialog/create-new-user-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavBarComponent,
     UsersPageComponent,
     NotFoundPageComponent,
-    UserInfoTableComponent
+    UserInfoTableComponent,
+    CreateNewUserDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AngularMaterialModuleModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

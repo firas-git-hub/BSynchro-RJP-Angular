@@ -17,6 +17,14 @@ export class NavBarComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.resources = await this.config.getResourcesFromPath("/assets/resources.json", ResourcesLanguagesEnum[document.documentElement.lang.toString() as ResourcesLanguagesEnum]).then(result => this.resources = result);
+    await this.fillComponentData();
+  }
+
+  fillComponentData = async () => {
+    try {
+      this.resources = await this.config.getResourcesFromPath("/assets/resources.json", ResourcesLanguagesEnum[document.documentElement.lang.toString() as ResourcesLanguagesEnum]).then(result => this.resources = result);
+    } catch (error) {
+      console.error("UserInfoTableComponent -> fillComponentData : " + error);
+    }
   }
 }

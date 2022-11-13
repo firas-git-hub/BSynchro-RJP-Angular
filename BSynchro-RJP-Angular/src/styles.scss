@@ -17,6 +17,10 @@ body {
     height: 100vh;
 }
 
+p {
+    margin: 0;
+}
+
 .background-color--transparent-black {
     background-color: hsla(0, 0%, 0%, 0);
     transition: background-color 0.5s;
@@ -96,4 +100,11 @@ body {
             height: 100%;
         }
     }
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
 }

@@ -1,0 +1,16 @@
+<h1>{{resources ? resources.createUserDialogHeader : ""}}</h1>
+<mat-dialog-content>
+    <mat-form-field appearance="standard">
+        <mat-label>{{resources ? resources.name : ""}}</mat-label>
+        <input matInput [(ngModel)]="data.Name">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>{{resources ? resources.surname : ""}}</mat-label>
+        <input matInput [(ngModel)]="data.Surname">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button class="add-button" [mat-dialog-close]="data">
+        <p>{{resources ? resources.addUser : ""}}</p>
+    </button>
+</mat-dialog-actions>

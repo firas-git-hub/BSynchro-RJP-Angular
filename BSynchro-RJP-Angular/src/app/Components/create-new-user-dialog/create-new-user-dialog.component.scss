@@ -1,0 +1,40 @@
+:host {
+    mat-form-field {
+        width: 100%;
+    }
+
+    mat-dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    .add-button {
+        height: 2rem;
+        align-self: flex-end;
+        display: flex;
+        background-color: lightblue;
+
+        p {
+            font-size: smaller;
+        }
+
+        ::ng-deep .mat-button-wrapper {
+            align-self: center;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 0.5rem;
+        }
+    }
+
+    .add-button:hover {
+        background-color: rgb(151, 189, 201);
+    }
+
+    .add-button:active {
+        background-color: rgb(140, 176, 187);
+    }
+}

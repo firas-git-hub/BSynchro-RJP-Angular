@@ -26,15 +26,16 @@
 
     .nav-bar__button {
         width: fit-content;
-        height: 2.5rem;
-        border: unset;
-        align-self: center;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 0.5rem;
+
+        ::ng-deep .mat-button-wrapper {
+            align-self: center;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 0.5rem;
+        }
 
         .button-icon {
             width: 1.5rem;
