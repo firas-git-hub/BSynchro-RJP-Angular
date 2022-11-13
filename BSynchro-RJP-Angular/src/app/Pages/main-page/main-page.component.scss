@@ -3,85 +3,35 @@
     flex-direction: column;
     overflow: auto;
     height: 100%;
-}
 
-.main-page-body {
-    height: 100%;
-    overflow: auto;
-    padding: 1rem;
-    background-color: whitesmoke;
-    border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
-
-    .main-page-body__mat-card {
+    .mat-card-body__description-card {
+        flex-basis: 28%;
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
+        row-gap: 4rem;
+        margin: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0rem 0rem 1rem 0.1rem hsl(0deg 0% 0% / 10%);
 
-        mat-card-header {
-
-            font-weight: bold;
-            padding-bottom: 1rem;
-
-            mat-card-title {
-                font-weight: bold;
-                font-size: 3.5rem;
-                text-align: end !important;
-            }
-
-            mat-card-subtitle {
-                font-weight: normal;
-                font-size: 1.5rem;
-            }
+        .mat-card-body__description-card__img-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
 
             img {
+                justify-self: center;
                 width: 10rem;
-                height: 10rem;
-                outline: 0.2rem solid black;
+                height: auto;
             }
         }
 
-        .main-page-body__mat-card__mat-card-body {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            column-gap: 4rem;
-            position: relative;
-            height: 100%;
-
-            .mat-card-body__description-card {
-                flex-basis: 28%;
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                row-gap: 2rem;
-                margin: 1rem;
-                border-radius: 0.5rem;
-                box-shadow: 0rem 0rem 1rem 0.1rem hsl(0deg 0% 0% / 10%);
-
-                .mat-card-body__description-card__img-container {
-                    display: flex;
-                    justify-content: center;
-                    padding: 1rem;
-
-                    img {
-                        justify-self: center;
-                        width: 10rem;
-                        height: auto;
-                    }
-                }
-
-                p {
-                    font-weight: bold;
-                    text-align: center;
-                    line-height: 1.5rem;
-                    padding: 1rem 4rem;
-                }
-            }
+        p {
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.5rem;
+            margin: 1rem 4rem;
+            min-width: 11rem;
         }
     }
-
 }

@@ -47,3 +47,53 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+.page-body {
+    height: 100%;
+    overflow: auto;
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+
+    .page-body__mat-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        mat-card-header {
+
+            font-weight: bold;
+            padding-bottom: 1rem;
+
+            mat-card-title {
+                font-weight: bold;
+                font-size: 3.5rem;
+                text-align: end !important;
+            }
+
+            mat-card-subtitle {
+                font-weight: normal;
+                font-size: 1.5rem;
+            }
+
+            img {
+                width: 10rem;
+                height: 10rem;
+                outline: 0.2rem solid black;
+            }
+        }
+
+        .page-body__mat-card__mat-card-body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            column-gap: 4rem;
+            position: relative;
+            height: 100%;
+        }
+    }
+}

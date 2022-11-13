@@ -1,1 +1,24 @@
-<p>user-info-table works!</p>
+<div class="users-table-container">
+    <table mat-table [dataSource]="users" *ngIf="users != null && users.length > 0">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>{{resources ? resources.id : ""}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>{{resources ? resources.name : ""}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="surname">
+            <th mat-header-cell *matHeaderCellDef>{{resources ? resources.surname : ""}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="usersTableColumnsToShow"></tr>
+        <tr mat-row *matRowDef="let row; columns: usersTableColumnsToShow;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>

@@ -27,7 +27,7 @@ export class CustomersService {
         .set('Access-Control-Allow-Origin', this.customersApiUrl);
       return this.http.get<UserInfo>(this.customersApiUrl + this.getUserInfoActionUrl + userId, { headers });
     } catch (error) {
-      console.log("Error getUserInfo : " + error);
+      console.log("CustomersService -> getUserInfo : " + error);
       return null;
     }
   }
@@ -39,7 +39,7 @@ export class CustomersService {
         .set("Content-Type", "application/json");
       return this.http.post(this.customersApiUrl + this.createAccountForUserActionUrl, createAccountForUserData, { headers });
     } catch (error) {
-      console.log("Error createNewAccountForUser : " + error);
+      console.log("CustomersService -> createNewAccountForUser : " + error);
       return null;
     }
   }
@@ -50,7 +50,7 @@ export class CustomersService {
         .set("Content-Type", "application/json");
       return this.http.post(this.customersApiUrl + this.createNewUserActionUrl, newUserInfo, { headers });
     } catch (error) {
-      console.log("Error createNewUser : " + error);
+      console.log("CustomersService -> createNewUser : " + error);
       return null;
     }
   }
@@ -61,7 +61,7 @@ export class CustomersService {
         .set("Content-Type", "application/json");
       return this.http.get<User[]>(this.customersApiUrl + this.getAllUsersActionUrl, { headers });
     } catch (error) {
-      console.log("Error getAllUsers : " + error);
+      console.log("CustomersService -> getAllUsers : " + error);
       return null;
     }
   }

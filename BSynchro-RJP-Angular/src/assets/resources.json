@@ -1,5 +1,4 @@
 [
-
     {
         "key": "bsynchroRJP",
         "en": "BSynchro RJP"
@@ -31,6 +30,34 @@
     {
         "key": "typescriptCardDescription",
         "en": "TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript."
+    },
+    {
+        "key": "notFoundError",
+        "en": "404 Not Found"
+    },
+    {
+        "key": "notFoundDescription",
+        "en": "The page that you are trying to find does not exist."
+    },
+    {
+        "key": "id",
+        "en": "Id"
+    },
+    {
+        "key": "name",
+        "en": "Name"
+    },
+    {
+        "key": "surname",
+        "en": "Surname"
+    },
+    {
+        "key": "",
+        "en": ""
+    },
+    {
+        "key": "",
+        "en": ""
     },
     {
         "key": "",

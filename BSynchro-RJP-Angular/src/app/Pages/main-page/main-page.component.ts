@@ -20,18 +20,14 @@ export class MainPageComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.resources = await this.config.getResourcesFromPath("/assets/resources.json", ResourcesLanguagesEnum[document.documentElement.lang.toString() as ResourcesLanguagesEnum]).then(result => this.resources = result);
-    this.fillComponentData();
+    await this.fillComponentData();
   }
 
-  fillComponentData = () => {
+  fillComponentData = async () => {
     try {
-      let response = this.customersService.getAllUsers();
-      if(response) {
-        response.subscribe(result => this.userInfoData = result);
-      }
+      this.resources = await this.config.getResourcesFromPath("/assets/resources.json", ResourcesLanguagesEnum[document.documentElement.lang.toString() as ResourcesLanguagesEnum]).then(result => this.resources = result);
     } catch (error) {
-      console.error(error);
+      console.error("MainPageComponent -> fillComponentData : " + error);
     }
   }
 
