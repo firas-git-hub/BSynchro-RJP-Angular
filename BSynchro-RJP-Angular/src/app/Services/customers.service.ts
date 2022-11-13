@@ -23,7 +23,8 @@ export class CustomersService {
   getUserInfo = (userId: number) => {
     try {
       const headers = new HttpHeaders()
-        .set("Content-Type", "application/json");
+        .set("Content-Type", "application/json")
+        .set('Access-Control-Allow-Origin', this.customersApiUrl);
       return this.http.get<UserInfo>(this.customersApiUrl + this.getUserInfoActionUrl + userId, { headers });
     } catch (error) {
       console.log("Error getUserInfo : " + error);

@@ -1,4 +1,30 @@
 <app-nav-bar></app-nav-bar>
 <div class="main-page-body">
-    
+    <mat-card class="main-page-body__mat-card">
+        <mat-card-header>
+            <img class="main-page-body__header-image" mat-card-avatar src="assets/Images/MainPageImage.png">
+            <mat-card-title>{{resources ? resources.bsynchroRJP : ""}}</mat-card-title>
+            <mat-card-subtitle>{{resources ? resources.demoProject : ""}}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="main-page-body__mat-card__mat-card-body">
+            <div class="mat-card-body__description-card">
+                <div class="mat-card-body__description-card__img-container">
+                    <img src="assets/Icons/css-icon.png">
+                </div>
+                <p>{{resources ? resources.cssCardDescription : ""}}</p>
+            </div>
+            <div class="mat-card-body__description-card">
+                <div class="mat-card-body__description-card__img-container">
+                    <img src="assets/Icons/html-icon.png">
+                </div>
+                <p>{{resources ? resources.htmlCardDescription : ""}}</p>
+            </div>
+            <div class="mat-card-body__description-card">
+                <div class="mat-card-body__description-card__img-container">
+                    <img src="assets/Icons/typescript-icon.png">
+                </div>
+                <p>{{resources ? resources.typescriptCardDescription : ""}}</p>
+            </div>
+        </div>
+    </mat-card>
 </div>

@@ -13,8 +13,24 @@
         "en": "Users"
     },
     {
-        "key": "",
-        "en": ""
+        "key": "demoProject",
+        "en": "Demo Project"
+    },
+    {
+        "key": "endpoints",
+        "en": "Endpoints"
+    },
+    {
+        "key": "cssCardDescription",
+        "en": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It also describes how elements should be rendered on screen, on paper, in speech, or on other media."
+    },
+    {
+        "key": "htmlCardDescription",
+        "en": "HTML (Hypertext Markup Language) is a text-based approach to describing how content contained within an HTML file is structured. This markup tells a web browser how to display text, images and other forms of multimedia on a webpage."
+    },
+    {
+        "key": "typescriptCardDescription",
+        "en": "TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript."
     },
     {
         "key": "",

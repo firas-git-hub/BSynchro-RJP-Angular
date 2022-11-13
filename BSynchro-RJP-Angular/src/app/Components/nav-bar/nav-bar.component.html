@@ -5,13 +5,20 @@
         <div class="button-icon">
             <img src="assets/Icons/home.png">
         </div>
-        <p class="">{{resources ? resources.home : ""}}</p>
+        <p>{{resources ? resources.home : ""}}</p>
     </button>
     <mat-divider [vertical]="true"></mat-divider>
     <button class="nav-bar__button background-color--transparent-black" mat-button routerLink="">
         <div class="button-icon">
             <img src="assets/Icons/user.png">
         </div>
-        <p class="">{{resources ? resources.users : ""}}</p>
+        <p>{{resources ? resources.users : ""}}</p>
+    </button>
+    <mat-divider [vertical]="true"></mat-divider>
+    <button class="nav-bar__button background-color--transparent-black" mat-button routerLink="">
+        <div class="button-icon">
+            <img src="assets/Icons/endpoints.png">
+        </div>
+        <p>{{resources ? resources.endpoints : ""}}</p>
     </button>
 </div>
